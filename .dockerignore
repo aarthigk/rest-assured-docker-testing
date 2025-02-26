@@ -1,0 +1,12 @@
+# Ignore test output
+test-output/
+
+# Ignore Git files
+.git/
+
+# Ignore IDE-specific files
+.idea/
+*.iml
+
+# Ignore Maven build files
+target/

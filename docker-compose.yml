@@ -1,0 +1,7 @@
+version: '3'
+services:
+  api-tests:
+    image: custom_api_runner
+    container_name: my_api_container
+    volumes:
+      - ./test-output:/app/test-outputdocker rm my_api_container

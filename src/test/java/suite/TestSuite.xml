@@ -1,0 +1,22 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="API Test Suite">
+    <listeners>
+        <listener class-name="listeners.CustomTestListener"/>
+    </listeners>
+    <test name="Microservice1 Tests">
+        <classes>
+            <class name="tests.Service2Tests"/>
+        </classes>
+    </test>
+    <test name="Petstore Tests">
+        <classes>
+         <class name="tests.PetStoreTests"/>
+        </classes>
+    </test>
+    <test name="PetstoreClient Tests">
+        <classes>
+                  <class name="tests.PetStoreClientTests"/>
+           </classes>
+       </test>
+
+   </suite>
