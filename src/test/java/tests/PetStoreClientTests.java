@@ -28,16 +28,8 @@ public class PetStoreClientTests {
     @Test
     public void testGetPetByIdClient() {
         String petId = "12";  // Example pet ID
-   //     ExtentTest test = ReportManager.createTest("Retrieve 12 Id dog");
-        //  ReportManager.createTest("testGetPetById").info("Sending request to fetch pet with ID: " + petId);
-
         Response response = petStoreClient.getPetById(petId);
         int statusCode = response.getStatusCode();
-
-        //   ReportManager.getTest("testGetPetById").info("Response Status Code: " + statusCode);
-        // ReportManager.getTest("testGetPetById").info("Response Body: " + response.getBody().asString());
-//        test.log(Status.INFO, "Response Status Code: " + response.getStatusCode());
-//        test.log(Status.INFO, "Response Body: " + response.getBody().asString());
 
         Assert.assertEquals(statusCode, 200, "Expected 200 OK response");
     }
@@ -45,16 +37,8 @@ public class PetStoreClientTests {
     @Test
     public void testCreatePetClient() {
         String requestBody = "{ \"id\": 123, \"name\": \"Doggie\", \"status\": \"available\" }";
-        // ReportManager.createTest("testCreatePet").info("Sending request to create a new pet: " + requestBody);
-    //    ExtentTest test = ReportManager.createTest("Create 123Dog");
         Response response = petStoreClient.createPet(requestBody);
         int statusCode = response.getStatusCode();
-
-        //    ReportManager.getTest("testCreatePet").info("Response Status Code: " + statusCode);
-        //  ReportManager.getTest("testCreatePet").info("Response Body: " + response.getBody().asString());
-
-//        test.log(Status.INFO, "Response Status Code: " + response.getStatusCode());
-//        test.log(Status.INFO, "Response Body: " + response.getBody().asString());
 
         Assert.assertEquals(statusCode, 200, "Expected 200 OK response");
     }
@@ -62,17 +46,9 @@ public class PetStoreClientTests {
     @Test
     public void testCreatePetClientRandom() {
         String requestBody = generatePetPayload();
-        // ReportManager.createTest("testCreatePet").info("Sending request to create a new pet: " + requestBody);
-     //   ExtentTest test = ReportManager.createTest("Create with randomDog");
+
         Response response = petStoreClient.createPet(requestBody);
         int statusCode = response.getStatusCode();
-
-        //    ReportManager.getTest("testCreatePet").info("Response Status Code: " + statusCode);
-        //  ReportManager.getTest("testCreatePet").info("Response Body: " + response.getBody().asString());
-
-    //    test.log(Status.INFO, "Response Status Code: " + response.getStatusCode());
-      //  test.log(Status.INFO, "Response Body: " + response.getBody().asString());
-
         Assert.assertEquals(statusCode, 200, "Expected 200 OK response");
     }
 
