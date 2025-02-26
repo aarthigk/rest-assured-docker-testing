@@ -13,6 +13,11 @@
          <class name="tests.PetStoreTests"/>
         </classes>
     </test>
+    <test name="User Tests">
+        <classes>
+            <class name="tests.UserClientTests"/>
+        </classes>
+    </test>
     <test name="PetstoreClient Tests">
         <classes>
                   <class name="tests.PetStoreClientTests"/>

@@ -11,10 +11,16 @@ public class ServiceEndpoints {
     public static final String UPDATE_PET = PETSTORE_BASE_URL + "/pet";
     public static final String DELETE_PET = PETSTORE_BASE_URL + "/pet/{petId}";
 
+    public static final String GET_USER = PETSTORE_BASE_URL +"/user/{userName}";
+    public static final String CREATE_USER = PETSTORE_BASE_URL +"/user";
+    public static final String CREATE_USER_LIST = PETSTORE_BASE_URL +"/user/createWithList";
+
     // Base URL for another microservice
     public static final String ANOTHER_SERVICE_BASE_URL = "http://api.example.com/v1";
 
     // Endpoints for another microservice
     public static final String GET_RESOURCE = ANOTHER_SERVICE_BASE_URL + "/resource/{id}";
     public static final String CREATE_RESOURCE = ANOTHER_SERVICE_BASE_URL + "/resource";
+
+
 }
