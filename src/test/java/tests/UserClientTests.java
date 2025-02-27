@@ -42,7 +42,7 @@ public class UserClientTests {
     }
     @Test
     public void testGetUserByName() {
-        String userName = "user1";  // Example pet ID
+        String userName = "usser45r";  // Example pet ID
         Response response = userClient.getUserById(userName);
         int statusCode = response.getStatusCode();
 
