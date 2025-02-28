@@ -45,7 +45,7 @@ public class UserClientTests {
         String userName = "usser45r";  // Example pet ID
         Response response = userClient.getUserById(userName);
         int statusCode = response.getStatusCode();
-
+        log.println(response.prettyPrint());
         Assert.assertEquals(statusCode, 200, "Expected 200 OK response");
     }
 

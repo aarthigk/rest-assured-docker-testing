@@ -1,4 +1,6 @@
 package tests;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import constants.ServiceEndpoints;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
@@ -8,9 +10,11 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
     @Listeners(CustomTestListener.class)
     public class PetStoreTests {
+        private static final Logger logger = LogManager.getLogger(PetStoreClientTests.class);
 
         @Test
         public void testGetPetById() {
+            logger.info("Starting test: testCreatePetClientRandom");
             String endpoint = ServiceEndpoints.GET_PET_BY_ID.replace("{petId}", "12");
 
             // Send GET request
@@ -19,6 +23,8 @@ import org.testng.annotations.Test;
                     .get(endpoint);
             // Validate response
             Assert.assertEquals(response.getStatusCode(), 200);
+            logger.info("Response received with status code: " + response.asPrettyString());
+
             Assert.assertEquals(response.jsonPath().getInt("id"), 12);
             Assert.assertTrue(true);
         }
@@ -37,6 +43,7 @@ import org.testng.annotations.Test;
                         .post(endpoint);
                 System.out.println("Using API Endpoint: " + endpoint);
                Assert.assertEquals(response.getStatusCode(), 200, "Expected status code 200");
+                logger.info("Response received with status code: " + response.asPrettyString());
 
             } catch (AssertionError e) {
 

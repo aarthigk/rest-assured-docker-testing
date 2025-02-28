@@ -1,0 +1,52 @@
+2025-02-28 19:57:43 [main] INFO  PetStoreClientTests - PetStoreClient initialized.
+2025-02-28 19:57:45 [main] INFO  PetStoreClientTests - Response received with status code: 200
+2025-02-28 19:57:46 [main] INFO  PetStoreClientTests - Response received with status code: 200
+2025-02-28 19:57:47 [main] INFO  PetStoreClientTests - Response received with status code: 200
+2025-02-28 20:00:01 [main] INFO  PetStoreClientTests - PetStoreClient initialized.
+2025-02-28 20:00:03 [main] INFO  PetStoreClientTests - Response received with status code: {
+    "id": 123,
+    "name": "Doggie",
+    "photoUrls": [
+        
+    ],
+    "tags": [
+        
+    ],
+    "status": "available"
+}
+2025-02-28 20:00:04 [main] INFO  PetStoreClientTests - Response received with status code: 200
+2025-02-28 20:00:05 [main] INFO  PetStoreClientTests - Response received with status code: {
+    "id": 123,
+    "name": "Doggie",
+    "photoUrls": [
+        
+    ],
+    "tags": [
+        
+    ],
+    "status": "available"
+}
+2025-02-28 20:04:45 [main] INFO  PetStoreClientTests - PetStoreClient initialized.
+2025-02-28 20:04:48 [main] INFO  PetStoreClientTests - Response received with status code: {
+    "id": 123,
+    "name": "Doggie",
+    "photoUrls": [
+        
+    ],
+    "tags": [
+        
+    ],
+    "status": "available"
+}
+2025-02-28 20:04:49 [main] INFO  PetStoreClientTests - Response received with status code: 200
+2025-02-28 20:04:50 [main] INFO  PetStoreClientTests - Response received with status code: {
+    "id": 123,
+    "name": "Doggie",
+    "photoUrls": [
+        
+    ],
+    "tags": [
+        
+    ],
+    "status": "available"
+}

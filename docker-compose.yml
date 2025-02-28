@@ -1,7 +1,13 @@
-version: '3'
+version: '3.8'
+
 services:
   api-tests:
     image: custom_api_runner
     container_name: my_api_container
+    build:
+      context: .
+      dockerfile: Dockerfile
     volumes:
-      - ./test-output:/app/test-outputdocker rm my_api_container
+      - ./test-output:/app/test-output  # Maps test reports to your local machine
+    working_dir: /app
+    command: ["mvn", "test", "-Dsurefire.suiteXmlFiles=/app/src/test/java/suite/TestSuite.xml"]

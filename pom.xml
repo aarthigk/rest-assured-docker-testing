@@ -56,10 +56,12 @@
         <version>3.2.5</version>
         <configuration>
             <suiteXmlFiles>
-                <suiteXmlFile>C:\Users\gkaar\Documents\ContainerApi\src\test\java\suite\TestSuite.xml</suiteXmlFile>
+           <!--     <suiteXmlFile>C:\Users\gkaar\Documents\ContainerApi\src\test\java\suite\TestSuite.xml</suiteXmlFile>-->
+                <suiteXmlFile>src/test/java/suite/TestSuite.xml</suiteXmlFile>
             </suiteXmlFiles>
         </configuration>
     </plugin>
+
     </plugins>
     </build>
 
@@ -67,7 +69,8 @@
         <profile>
             <id>regression</id>
             <build>
-                <plugins>
+                <plugins> <!--for doccker run fix -->
+
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-surefire-plugin</artifactId>

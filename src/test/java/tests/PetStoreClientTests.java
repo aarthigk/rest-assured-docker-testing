@@ -12,17 +12,21 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import utils.ReportManager;
 import services.PetStoreClient;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import static utils.TestDataGenerator.generatePetPayload;
 
 @Listeners(CustomTestListener.class)  // Attach Extent Reports Listener
 public class PetStoreClientTests {
-
+    private static final Logger logger = LogManager.getLogger(PetStoreClientTests.class);
     private PetStoreClient petStoreClient;
 
     @BeforeClass
     public void setup() {
-        petStoreClient = new PetStoreClient();  // Initialize API Client
+        petStoreClient = new PetStoreClient();
+        logger.info("PetStoreClient initialized.");
+        // Initialize API Client
     }
 
     @Test
@@ -32,6 +36,7 @@ public class PetStoreClientTests {
         int statusCode = response.getStatusCode();
 
         Assert.assertEquals(statusCode, 200, "Expected 200 OK response");
+        logger.info("Response received with status code: " + response.asPrettyString());
     }
 
 
@@ -42,6 +47,7 @@ public class PetStoreClientTests {
         int statusCode = response.getStatusCode();
 
         Assert.assertEquals(statusCode, 200, "Expected 200 OK response");
+        logger.info("Response received with status code: " + response.asPrettyString());
     }
 
 
@@ -51,7 +57,9 @@ public class PetStoreClientTests {
 
         Response response = petStoreClient.createPet(requestBody);
         int statusCode = response.getStatusCode();
+
         Assert.assertEquals(statusCode, 200, "Expected 200 OK response");
+        logger.info("Response received with status code: " + statusCode);
     }
 
 
