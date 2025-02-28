@@ -26,15 +26,6 @@ public class PetStoreClientTests {
     }
 
     @Test
-    public void testGetPetByIdClient() {
-        String petId = "12";  // Example pet ID
-        Response response = petStoreClient.getPetById(petId);
-        int statusCode = response.getStatusCode();
-
-        Assert.assertEquals(statusCode, 200, "Expected 200 OK response");
-    }
-
-    @Test
     public void testCreatePetClient() {
         String requestBody = "{ \"id\": 123, \"name\": \"Doggie\", \"status\": \"available\" }";
         Response response = petStoreClient.createPet(requestBody);
@@ -42,6 +33,17 @@ public class PetStoreClientTests {
 
         Assert.assertEquals(statusCode, 200, "Expected 200 OK response");
     }
+
+
+    @Test
+    public void testGetPetByIdClient() {
+        String petId = "123";  // Example pet ID
+        Response response = petStoreClient.getPetById(petId);
+        int statusCode = response.getStatusCode();
+
+        Assert.assertEquals(statusCode, 200, "Expected 200 OK response");
+    }
+
 
     @Test
     public void testCreatePetClientRandom() {
