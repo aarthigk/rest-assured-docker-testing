@@ -1,5 +1,5 @@
 # rest-assured-docker-testing
-Api testframework
+TestAutomation Framework, 📝 **Automated testing with RestAssured**
 
 ## 🚀 Automated Test Report Hosted on AWS S3
 
@@ -11,4 +11,16 @@ This test report is automatically generated and stored in **Amazon S3**, showcas
 🔹 **Tech Used:**  
 - 🛠 **AWS S3** for cloud storage  
 - 🏗 **AWS CodeBuild** for CI/CD  
-- 📝 **Automated testing with RestAssured**
+- **Docker
+- **Restassured,log4j,extent report
+
+  ## INSTRUCTION To RUN
+  1. Running Tests Locally (Without Docker)
+  - Build & Run with Maven directly
+  - mvn clean test
+ 
+  2. Running with Docker Compose
+     - ** docker-compose up –build
+     - To remove container
+     - ** docker-compose down
+    
